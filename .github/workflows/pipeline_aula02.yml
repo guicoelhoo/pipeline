@@ -27,3 +27,11 @@ jobs:
       - name: Rodar testes
         run: pytest
 
+
+deploy:
+  runs-on: ubuntu-latest
+  needs: build
+
+  steps:
+    - name: Simular Deploy do tricolor
+      run: echo "Deploy tricolor realizado com sucesso"
