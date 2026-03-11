@@ -1,11 +1,13 @@
-name: Pipeline Aula 3 rrrrr
+name: Pipeline Aula 3
 
 on:
   push:
     branches:
       - dev
 
-build:
+jobs:
+
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,17 +27,17 @@ build:
       - name: Rodar testes
         run: pytest
 
-    deploy:
-     runs-on: ubuntu-latest
-     needs: build
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
 
     steps:
       - name: Simular Deploy
         run: echo "Deploy realizado com sucesso"
 
-    test:
-     runs-on: ubuntu-latest
-     needs: deploy
+  test:
+    runs-on: ubuntu-latest
+    needs: deploy
 
     steps:
       - name: Simular testes
