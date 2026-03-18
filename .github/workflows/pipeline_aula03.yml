@@ -39,19 +39,9 @@ jobs:
           name: codigo-buildado
           path: pipeline-demo.zip
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: produção
-
-    steps:
-      - name: Simular Deploy
-        run: echo "Deploy realizado com sucesso"
-
   test:
     runs-on: ubuntu-latest
-    needs: deploy
+    needs: build
 
     steps:
       - name: Simular testes
