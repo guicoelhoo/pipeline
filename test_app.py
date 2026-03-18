@@ -1,7 +1,4 @@
-from app import quiz
+from app import soma
 
-def test_quiz_certo():
-    assert quiz("palmeiras") == "certo"
-
-def test_quiz_errado():
-    assert quiz("flamengo") == "errado"
+def test_soma():
+    assert soma(2,3) == 5
