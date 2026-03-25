@@ -24,6 +24,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+        - name: Análise com SonarCloud
+        uses: SonarSource/sonarcloud-github-action@v2
+        with:
+          args: >
+            -Dsonar.projectKey=guicoelhoo_pipeline
+            -Dsonar.organization=guicoelhoo
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       
       - name: Gerar artefato ZIP
         run: zip -r pipeline-demo.zip .
