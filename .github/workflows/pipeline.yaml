@@ -20,12 +20,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Intalar as dependencias
+      - name: Instalar as dependencias
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-        - name: Análise com SonarCloud
+      - name: Análise com SonarCloud
         uses: SonarSource/sonarcloud-github-action@v2
         with:
           args: >
