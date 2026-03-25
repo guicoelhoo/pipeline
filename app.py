@@ -3,3 +3,8 @@ def quiz(resposta):
         return "certo"
     else:
         return "errado"
+#def quiz(resposta):
+#    if "sao paulo" in resposta.lower():
+ #       return "certo"
+ #   else:
+ #       return "errado"
