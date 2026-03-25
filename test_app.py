@@ -1,6 +1,7 @@
-from app import soma
+from app import quiz
 
-def test_soma():
-    """Testa a função de soma."""
-    assert soma(2, 3) == 5
-    
+def test_quiz_certo():
+    assert quiz("sao paulo") == "certo"
+
+def test_quiz_errado():
+    assert quiz("flamengo") == "errado"
