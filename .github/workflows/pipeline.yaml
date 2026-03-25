@@ -53,11 +53,11 @@ jobs:
       - name: Simular deploy
         run: echo "Deploy feito com sucesso em produção"
 
-      - [cite_start]name: Análise com SonarCloud [cite: 46]
-        [cite_start]uses: SonarSource/sonarcloud-github-action@v2 [cite: 47]
+      - name: Análise com SonarCloud
+        uses: SonarSource/sonarcloud-github-action@v2
         with:
           args: >
-            -Dsonar.projectKey=SEU_PROJECT_KEY [cite: 50]
-            -Dsonar.organization=SUA_ORGANIZATION [cite: 51]
+            -Dsonar.projectKey=SEU_PROJECT_KEY
+            -Dsonar.organization=SUA_ORGANIZATION
         env:
-          [cite_start]SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} [cite: 53]
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
